@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection"/>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link rel="shortcut icon" href="">
+    <title> Number to words</title>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+<body>
+<nav class="blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Numbers to Words</a>
+    </div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+            {{#if message}}
+            <div class="row center">
+            <h3>
+                {{message}}
+            </h3>
+                <form method="GET" action="/reset">
+                    <div class="row center">
+                        <!--TODO-->
+                        <a href="/reset" class="btn-large waves-effect waves-light green">Redo</a>
+                    </div>
+                </form>
+            </div>
+            {{else}}
+
+                <div class="row center">
+                    <h5 class="header col s12 light">Input the number you want converted into a words</h5>
+                </div>
+            <div class="input-field col s9">
+                <form method="POST">
+                    <input id="number" type="number" placeholder="12345.67" required>
+                    <div class="row center">
+                        <!--TODO-->
+                        <!--<a href="" type="submit" class="btn-large waves-effect waves-light green">Convert</a>-->
+                    <button class="btn-large waves-effect " type="submit">go</button>
+                    </div>
+                </form>
+            </div>
+            {{/if}}
+        <br><br>
+
+    </div>
+</div>
+
+<script>
+$('form').submit(function (e) {
+    // stop form from submitting
+    e.preventDefault();
+    // get value from input
+    var inputValue = $('#number').val();
+
+    // validate inputValue here.
+    if (inputValue === "" ) return;
+
+    // redirect user
+    window.location = "/api/numberToWordConverter/" + inputValue;
+});
+</script>
+
+<!--  Scripts-->
+<!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+<!--<script src="js/materialize.js"></script>-->
+<!--<script src="js/init.js"></script>-->
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Number_to_Words_Web_Page_main" target="1.8" />
+      <module name="Number_to_Words_Web_Page_test" target="1.8" />
+      <module name="numbers_to_words_main" target="1.8" />
+      <module name="numbers_to_words_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

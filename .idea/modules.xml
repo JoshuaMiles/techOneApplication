@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page.iml" filepath="$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page_main.iml" group="Number_to_Words_Web_Page" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Number_to_Words_Web_Page_test.iml" group="Number_to_Words_Web_Page" />
+    </modules>
+  </component>
+</project>
